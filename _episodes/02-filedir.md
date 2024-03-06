@@ -45,13 +45,11 @@ a command is important. `pwd` shows you where you are:
 ```
 $ pwd
 ```
-
 {: .language-bash}
 
 ```
 /Users/nelle
 ```
-
 {: .output}
 
 Here,
@@ -67,7 +65,7 @@ which is Nelle's **home directory**:
 > (Note that it may look slightly different for different versions of Windows.)
 > In future examples, we've used Mac output as the default - Linux and Windows
 > output may differ slightly, but should be generally similar.
-> {: .callout}
+{: .callout}
 
 To understand what a 'home directory' is,
 let's have a look at how the file system as a whole is organized.  For the
@@ -105,7 +103,7 @@ because its name begins with `/`.
 > When it appears at the front of a file or directory name,
 > it refers to the root directory. When it appears *inside* a path,
 > it's just a separator.
-> {: .callout}
+{: .callout}
 
 Underneath `/Users`,
 we find one directory for each user with an account on Nelle's machine,
@@ -127,14 +125,12 @@ which stands for 'listing':
 ```
 $ ls
 ```
-
 {: .language-bash}
 
 ```
 Applications Documents    Library      Music        Public
 Desktop      Downloads    Movies       Pictures
 ```
-
 {: .output}
 
 (Again, your results may be slightly different depending on your operating
@@ -157,14 +153,12 @@ directory.
 ```
 $ ls -F
 ```
-
 {: .language-bash}
 
 ```
 Applications/ Documents/    Library/      Music/        Public/
 Desktop/      Downloads/    Movies/       Pictures/
 ```
-
 {: .output}
 
 Here,
@@ -180,7 +174,6 @@ which we will dissect into its component parts:
 ```
 $ ls -F /
 ```
-
 {: .language-bash}
 
 `ls` is the **command**, with an **option** `-F` and an
@@ -205,7 +198,6 @@ $ ls -S Desktop/data-shell/data
 sunspot.txt  animal-counts  pdb        amino-acids.txt  salmon.txt
 planets.txt  elements       morse.txt  animals.txt
 ```
-
 {: .output}
 
 Putting all that together, our command above gives us a listing
@@ -215,7 +207,6 @@ An example of the output you might get from the above command is given below:
 ```
 $ ls -F /
 ```
-
 {: .language-bash}
 
 ```
@@ -223,7 +214,6 @@ Applications/         System/
 Library/              Users/
 Network/              Volumes/
 ```
-
 {: .output}
 
 ### Getting help
@@ -236,14 +226,12 @@ to use a command and what options it accepts:
    ```
    $ ls --help
    ```
-
    {: .language-bash}
 2. We can read its manual with `man`, such as:
 
    ```
    $ man ls
    ```
-
    {: .language-bash}
 
 **Depending on your environment you might find that only one of these works
@@ -259,7 +247,6 @@ information on how to use the command or program.
 ```
 $ ls --help
 ```
-
 {: .language-bash}
 
 ```
@@ -380,7 +367,6 @@ GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
 Full documentation at: <http://www.gnu.org/software/coreutils/ls>
 or available locally via: info '(coreutils) ls invocation'
 ```
-
 {: .output}
 
 > ## Unsupported command-line options
@@ -391,16 +377,14 @@ or available locally via: info '(coreutils) ls invocation'
 > ```
 > $ ls -j
 > ```
->
 > {: .language-bash}
 >
 > ```
 > ls: invalid option -- 'j'
 > Try 'ls --help' for more information.
 > ```
->
 > {: .error}
-> {: .callout}
+{: .callout}
 
 #### The `man` command
 
@@ -409,7 +393,6 @@ The other way to learn about `ls` is to type
 ```
 $ man ls
 ```
-
 {: .language-bash}
 
 This will turn your terminal into a page with a description
@@ -417,13 +400,13 @@ of the `ls` command and its options and, if you're lucky, some examples
 of how to use it.
 
 To navigate through the `man` pages,
-you may use `<kbd>`↑`</kbd>` and `<kbd>`↓`</kbd>` to move line-by-line,
-or try `<kbd>`B`</kbd>` and `<kbd>`Spacebar`</kbd>` to skip up and down by a full page.
+you may use <kbd>↑</kbd> and <kbd>↓</kbd> to move line-by-line,
+or try <kbd>B</kbd> and <kbd>Spacebar</kbd> to skip up and down by a full page.
 To search for a character or word in the `man` pages,
-use `<kbd>`/`</kbd>` followed by the character or word you are searching for.
-Sometimes a search will result in multiple hits.  If so, you can move between hits using `<kbd>`N`</kbd>` (for moving forward) and `<kbd>`Shift`</kbd>`+`<kbd>`N`</kbd>` (for moving backward).
+use <kbd>/</kbd> followed by the character or word you are searching for.
+Sometimes a search will result in multiple hits.  If so, you can move between hits using <kbd>N</kbd> (for moving forward) and <kbd>Shift</kbd>+<kbd>N</kbd> (for moving backward).
 
-To **quit** the `man` pages, press `<kbd>`Q`</kbd>`.
+To **quit** the `man` pages, press <kbd>Q</kbd>.
 
 > ## Manual pages on the web
 >
@@ -436,7 +419,7 @@ To **quit** the `man` pages, press `<kbd>`Q`</kbd>`.
 > [manuals](http://www.gnu.org/manual/manual.html) including the
 > [core GNU utilities](http://www.gnu.org/software/coreutils/manual/coreutils.html),
 > which covers many commands introduced within this lesson.
-> {: .callout}
+{: .callout}
 
 > ## Exploring More `ls` Flags
 >
@@ -454,9 +437,8 @@ To **quit** the `man` pages, press `<kbd>`Q`</kbd>`.
 >> and the time of its last modification. If you use both the `-h` option and the `-l` option,
 >> this makes the file size '**h**uman readable', i.e. displaying something like `5.3K`
 >> instead of `5369`.
->> {: .solution}
->> {: .challenge}
->>
+> {: .solution}
+{: .challenge}
 
 > ## Listing in Reverse Chronological Order
 >
@@ -473,9 +455,8 @@ To **quit** the `man` pages, press `<kbd>`Q`</kbd>`.
 >> The most recently changed file is listed last when using `-rt`. This
 >> can be very useful for finding your most recent edits or checking to
 >> see if a new output file was written.
->> {: .solution}
->> {: .challenge}
->>
+> {: .solution}
+{: .challenge}
 
 ### Exploring Other Directories
 
@@ -489,13 +470,11 @@ we want a listing of something other than our current working directory:
 ```
 $ ls -F Desktop
 ```
-
 {: .language-bash}
 
 ```
 data-shell/
 ```
-
 {: .output}
 
 Your output should be a list of all the files and sub-directories on your
@@ -519,14 +498,12 @@ a directory name to `ls`:
 ```
 $ ls -F Desktop/data-shell
 ```
-
 {: .language-bash}
 
 ```
 creatures/          molecules/          notes.txt           solar.pdf
 data/               north-pacific-gyre/ pizza.cfg           writing/
 ```
-
 {: .output}
 
 Second, we can actually change our location to a different directory, so
@@ -548,7 +525,6 @@ $ cd Desktop
 $ cd data-shell
 $ cd data
 ```
-
 {: .language-bash}
 
 These commands will move us from our home directory onto our Desktop, then into
@@ -561,26 +537,22 @@ because that's where we now are:
 ```
 $ pwd
 ```
-
 {: .language-bash}
 
 ```
 /Users/nelle/Desktop/data-shell/data
 ```
-
 {: .output}
 
 ```
 $ ls -F
 ```
-
 {: .language-bash}
 
 ```
 amino-acids.txt   elements/     pdb/	        salmon.txt
 animals.txt       morse.txt     planets.txt     sunspot.txt
 ```
-
 {: .output}
 
 We now know how to go down the directory tree, but
@@ -589,13 +561,11 @@ how do we go up?  We might try the following:
 ```
 $ cd data-shell
 ```
-
 {: .language-bash}
 
 ```
 -bash: cd: data-shell: No such file or directory
 ```
-
 {: .error}
 
 But we get an error!  Why is this?
@@ -611,7 +581,6 @@ that looks like this:
 ```
 $ cd ..
 ```
-
 {: .language-bash}
 
 `..` is a special directory name meaning
@@ -624,13 +593,11 @@ if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-
 ```
 $ pwd
 ```
-
 {: .language-bash}
 
 ```
 /Users/nelle/Desktop/data-shell
 ```
-
 {: .output}
 
 The special directory `..` doesn't usually show up when we run `ls`.  If we want
@@ -639,14 +606,12 @@ to display it, we can give `ls` the `-a` option:
 ```
 $ ls -F -a
 ```
-
 {: .language-bash}
 
 ```
 ./   .bash_profile  data/       north-pacific-gyre/  pizza.cfg  thesis/
 ../  creatures/     molecules/  notes.txt            solar.pdf  writing/
 ```
-
 {: .output}
 
 `-a` stands for 'show all';
@@ -671,7 +636,7 @@ equivalent to `ls -Fa`.
 > different programs on your computer. The prefix `.` is used to prevent these
 > configuration files from cluttering the terminal when a standard `ls` command
 > is used.
-> {: .callout}
+{: .callout}
 
 > ## Orthogonality
 >
@@ -684,7 +649,7 @@ equivalent to `ls -Fa`.
 > programmers say they are **orthogonal**:
 > Orthogonal systems tend to be easier for people to learn
 > because there are fewer special cases and exceptions to keep track of.
-> {: .callout}
+{: .callout}
 
 These then, are the basic commands for navigating the filesystem on your computer:
 `pwd`, `ls` and `cd`.  Let's explore some variations on those commands.  What happens
@@ -694,7 +659,6 @@ a directory?
 ```
 $ cd
 ```
-
 {: .language-bash}
 
 How can you check what happened?  `pwd` gives us the answer!
@@ -702,13 +666,11 @@ How can you check what happened?  `pwd` gives us the answer!
 ```
 $ pwd
 ```
-
 {: .language-bash}
 
 ```
 /Users/nelle
 ```
-
 {: .output}
 
 It turns out that `cd` without an argument will return you to your home directory,
@@ -721,7 +683,6 @@ to move to `data` in one step:
 ```
 $ cd Desktop/data-shell/data
 ```
-
 {: .language-bash}
 
 Check that we've moved to the right place by running `pwd` and `ls -F`
@@ -749,19 +710,16 @@ to move to `data-shell`.
 ```
 $ pwd
 ```
-
 {: .language-bash}
 
 ```
 /Users/nelle/Desktop/data-shell/data
 ```
-
 {: .output}
 
 ```
 $ cd /Users/nelle/Desktop/data-shell
 ```
-
 {: .language-bash}
 
 Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
@@ -780,7 +738,7 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > and forth between directories. The difference between `cd ..` and `cd -` is
 > that the former brings you *up*, while the latter brings you *back*. You can
 > think of it as the *Last Channel* button on a TV remote.
-> {: .callout}
+{: .callout}
 
 > ## Absolute vs Relative Paths
 >
@@ -809,9 +767,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >> 7. Yes: unnecessarily complicated, but correct.
 >> 8. Yes: shortcut to go back to the user's home directory.
 >> 9. Yes: goes up one level.
->>    {: .solution}
->>    {: .challenge}
->>
+> {: .solution}
+{: .challenge}
 
 > ## Relative Path Resolution
 >
@@ -832,9 +789,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >>    but with `..` we asked for one level further up.
 >> 3. No: see previous explanation.
 >> 4. Yes: `../backup/` refers to `/Users/backup/`.
->>    {: .solution}
->>    {: .challenge}
->>
+> {: .solution}
+{: .challenge}
 
 > ## `ls` Reading Comprehension
 >
@@ -846,7 +802,6 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > ```
 > pnas_sub/ pnas_final/ original/
 > ```
->
 > {: .output}
 >
 > ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
@@ -861,9 +816,8 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >> 2. Yes: `ls` without directory argument lists files and directories
 >>    in the current directory.
 >> 3. Yes: uses the absolute path explicitly.
->>    {: .solution}
->>    {: .challenge}
->>
+> {: .solution}
+{: .challenge}
 
 ### Nelle's Pipeline: Organizing Files
 
@@ -890,7 +844,7 @@ a directory called `revised-revised-results-3`.)
 > if she didn't use leading zeroes,
 > November ('11') would come before July ('7'). Similarly, putting the year first
 > means that June 2012 will come before June 2013.
-> {: .callout}
+{: .callout}
 
 Each of her physical samples is labelled according to her lab's convention
 with a unique ten-character ID,
@@ -908,7 +862,6 @@ Nelle can see what files she has using the command:
 ```
 $ ls north-pacific-gyre/2012-07-03/
 ```
-
 {: .language-bash}
 
 This is a lot to type,
@@ -918,24 +871,22 @@ If she types:
 ```
 $ ls nor
 ```
-
 {: .language-bash}
 
-and then presses `<kbd>`Tab`</kbd>` (the tab key on her keyboard),
+and then presses <kbd>Tab</kbd> (the tab key on her keyboard),
 the shell automatically completes the directory name for her:
 
 ```
 $ ls north-pacific-gyre/
 ```
-
 {: .language-bash}
 
-If she presses `<kbd>`Tab`</kbd>` again,
+If she presses <kbd>Tab</kbd> again,
 Bash will add `2012-07-03/` to the command,
 since it's the only possible completion.
-Pressing `<kbd>`Tab`</kbd>` again does nothing,
+Pressing <kbd>Tab</kbd> again does nothing,
 since there are 19 possibilities;
-pressing `<kbd>`Tab`</kbd>` twice brings up a list of all the files,
+pressing <kbd>Tab</kbd> twice brings up a list of all the files,
 and so on.
 This is called **tab completion**,
 and we will see it in many other tools as we go on.
